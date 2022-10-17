@@ -10,7 +10,7 @@ const galleryLink = document.querySelector('.gallery__link');
 
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 
-//galleryContainer.addEventListener('click', onClickImage);
+
 
 
 
@@ -35,7 +35,4 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250});
 
-//const lightbox = new SimpleLightbox('.gallery a', {navText});
-
-//const gallery = $(gallery__link).simpleLightbox();
-lightbox.next(); // Next Image
+lightbox.next(); 
