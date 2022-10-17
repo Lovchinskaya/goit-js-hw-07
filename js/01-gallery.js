@@ -21,10 +21,11 @@ function onClickImage(event) {
       <img src="${event.target.dataset.source}" alt="${description}" width="800" height="600">
      </div>`      );  
   instance.show();
-  
+  instance.visible();
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') instance.close();
   });
+
 }
 
 
