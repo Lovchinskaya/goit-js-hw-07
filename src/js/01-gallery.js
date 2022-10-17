@@ -20,17 +20,14 @@ function onClickImage(event) {
     `<div class="modal">
       <img src="${event.target.dataset.source}" width="800" height="600">
      </div>`      );  
-    instance.show();
-
+  instance.show();
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') instance.close();
+  });
 }
-//position: absolute;
-    /* opacity: 1; */
- //   z-index: 2;
-    /* top: 8%; */
-    /* left: 17%; */
-    /* transform: translate(14%, -112%); */
-//    top: 5em;
- //   left: 20em;
+
+
 
 function createGalleryImages(images) {
     const markupImages = images.map(({preview,original,description }) => {
