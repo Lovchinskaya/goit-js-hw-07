@@ -25,7 +25,6 @@ function onClickImage(event) {
   window.addEventListener('keydown', (event) => {
     if (event.code === 'Escape') instance.close();
   });
-  event.stopPropagation();
 }
 
 
