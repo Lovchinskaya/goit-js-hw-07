@@ -14,19 +14,20 @@ galleryContainer.addEventListener('click', onClickImage);
 function onClickImage(event) {
     event.preventDefault();
         console.log('click');
-  //  if (event.target.tagName !== 'gallery__image') return;
+
  
     const instance = basicLightbox.create(
     `<div class="modal">
-      <img src="${event.target.dataset.source}" alt="${description}" width="800" height="600">
-     </div>`      );  
+      <img src="${event.target.dataset.source}" width="800" height="600">
+     </div>` );  
   instance.show();
-  instance.visible();
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') instance.close();
+
+  window.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape') instance.close();
   });
- instance.close();
+  event.stopPropagation();
 }
+
 
 
 
