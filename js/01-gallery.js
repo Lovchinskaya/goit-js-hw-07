@@ -23,7 +23,7 @@ function onClickImage(event) {
         document.addEventListener('keydown', closeModalImg)
       },
       onClose() {
-        window.removeEventListener('keydown', closeModalImg)
+        document.removeEventListener('keydown', closeModalImg)
       },
     },
   )
