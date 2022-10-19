@@ -23,21 +23,22 @@ function onClickImage(event) {
         document.addEventListener('keydown', closeModalImg)
       },
       onClose() {
-        window.removeEventListener('keydown', closeModalIMg)
+        window.removeEventListener('keydown', closeModalImg)
       },
     },
   )
-  instance.show()
-}
+  instance.show();
 
-
-function CloseModalImg(event) {
+  function closeModalImg(event) {
   if (event.code === 'Escape') {
-    return
-  } else {  
     instance.close();
   }
 }
+}
+
+
+
+
 
 
 
